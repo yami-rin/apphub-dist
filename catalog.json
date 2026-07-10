@@ -14,6 +14,13 @@
       "packageName": "com.tofu.novelreader",
       "distRepo": "yami-rin/novelreader-dist",
       "description": "小説家になろう/カクヨム/ノクターン/ハーメルンのオフラインリーダー"
+    },
+    {
+      "id": "cardmanager",
+      "name": "CardManager",
+      "packageName": "com.tofu.cardmanager",
+      "distRepo": "yami-rin/cardmanager-dist",
+      "description": "遊戯王カード管理（カードリスト）。既存Webと同一アカウント・オフライン閲覧対応"
     }
   ]
 }
