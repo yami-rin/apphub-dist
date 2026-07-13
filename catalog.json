@@ -28,6 +28,13 @@
       "packageName": "com.wadop.lunafragments",
       "distRepo": "yami-rin/lunafragments-dist",
       "description": "レトロ調RPG。月の欠片を集める全5章の冒険（想定クリア3.5〜4h）"
+    },
+    {
+      "id": "sakura",
+      "name": "Sakura",
+      "packageName": "com.wadop.sakura",
+      "distRepo": "yami-rin/sakura-dist",
+      "description": "タッチマクロ。他アプリ上の操作を記録し自動再生（Shizuku/root不要・多指対応）"
     }
   ]
 }
