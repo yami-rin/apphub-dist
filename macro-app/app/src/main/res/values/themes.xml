@@ -1,0 +1,5 @@
+<resources>
+    <!-- Compose を使うため、実テーマは Kotlin(TouchMacroTheme) 側で定義する。
+         ここでは起動時の基礎テーマのみ。 -->
+    <style name="Theme.TouchMacro" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

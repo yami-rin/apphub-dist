@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- オーバーレイ表示（他のアプリ上への表示） -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 前景サービス（録画・再生の常駐） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- 通知（録画/再生の状態表示。Android 13+ は実行時許可） -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- バッテリー最適化除外の要求 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".TouchMacroApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TouchMacro"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TouchMacro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          マクロの記録・再生を担う AccessibilityService。
+          - canPerformGestures=true: dispatchGesture によるジェスチャー送信（再生）に必須。
+          - canRetrieveWindowContent は使わない（UI要素解析はしない方針）。
+          録画時の物理タッチ座標取得については README「技術検証」を参照（公開APIの制約あり）。
+        -->
+        <service
+            android:name=".service.TouchMacroAccessibilityService"
+            android:exported="false"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- 録画・再生の常駐制御用フォアグラウンドサービス -->
+        <service
+            android:name=".service.MacroSessionService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="ユーザーが作成した操作マクロの記録・再生の常駐制御" />
+        </service>
+    </application>
+</manifest>

@@ -20,11 +20,6 @@ android {
         versionCode = 1
         versionName = "0.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        // Room スキーマの書き出し先（マイグレーションテスト用）。
-        ksp {
-            arg("room.schemaLocation", "$projectDir/schemas")
-        }
     }
 
     buildTypes {
@@ -60,12 +55,18 @@ android {
     }
 }
 
+// Room スキーマの書き出し先（マイグレーションテスト用）。KSP のトップレベル DSL。
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
     // 純JVM の共通ドメインロジック（composite build から解決）
     implementation("com.wadop.touchmacro:core")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.activity.compose)
 

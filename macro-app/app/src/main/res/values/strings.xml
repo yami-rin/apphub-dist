@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TouchMacro</string>
+    <string name="accessibility_service_label">TouchMacro 記録・再生</string>
+    <string name="accessibility_service_description">画面上のタッチ操作マクロを再生します。dispatchGesture によるジェスチャー送信のためにユーザー補助サービスを使用します。画面内容の読み取りは行いません。</string>
+
+    <!-- 画面 -->
+    <string name="title_macro_list">マクロ一覧</string>
+    <string name="title_settings">再生設定</string>
+    <string name="title_unit_editor">ユニット作成</string>
+    <string name="title_permission">初期設定</string>
+
+    <!-- 権限案内 -->
+    <string name="perm_accessibility">ユーザー補助サービス</string>
+    <string name="perm_overlay">他のアプリ上への表示</string>
+    <string name="perm_notification">通知</string>
+    <string name="perm_battery">バッテリー最適化の除外</string>
+    <string name="perm_open_settings">設定を開く</string>
+
+    <!-- 通知 -->
+    <string name="notif_channel_session">マクロ記録・再生</string>
+    <string name="notif_recording">録画中</string>
+    <string name="notif_playing">再生中</string>
+</resources>
