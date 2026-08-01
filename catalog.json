@@ -41,7 +41,7 @@
       "name": "Free App Cloner",
       "packageName": "dev.localclone.app",
       "distRepo": "yami-rin/free-app-cloner-dist",
-      "description": "インストール済みアプリを名前・アイコン・権限などを設定して別アプリとして複製（split APK・DEX互換性検証対応）"
+      "description": "インストール済みアプリを名前・アイコン・権限などを設定して別アプリとして複製（split APK・クローン更新・ネイティブ互換性対応）"
     }
   ]
 }
