@@ -42,6 +42,13 @@
       "packageName": "dev.localclone.app",
       "distRepo": "yami-rin/free-app-cloner-dist",
       "description": "インストール済みアプリを名前・アイコン・権限などを設定して別アプリとして複製（split APK・クローン更新・端末間バックアップ・本体確認ゲート対応）"
+    },
+    {
+      "id": "wavelink",
+      "name": "WaveLink",
+      "packageName": "com.tofu.wavelink",
+      "distRepo": "yami-rin/wavelink-dist",
+      "description": "BLEデバイスをスキャンし、対応する2系統モーター機器と専用BLE照明を操作"
     }
   ]
 }
