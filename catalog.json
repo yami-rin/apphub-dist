@@ -16,6 +16,13 @@
       "description": "小説家になろう/カクヨム/ノクターン/ハーメルンのオフラインリーダー"
     },
     {
+      "id": "kakeinote",
+      "name": "家計ノート",
+      "packageName": "com.tofu.kakeinote",
+      "distRepo": "yami-rin/kakeinote-dist",
+      "description": "端末内で収支・予算・履歴を管理し、カテゴリ別・月別グラフで振り返れる家計簿（ダークモード・JSONバックアップ対応）"
+    },
+    {
       "id": "cardmanager",
       "name": "CardManager",
       "packageName": "com.tofu.cardmanager",
