@@ -16,6 +16,13 @@
       "description": "小説家になろう/カクヨム/ノクターン/ハーメルンのオフラインリーダー"
     },
     {
+      "id": "novelreader2",
+      "name": "NovelReader",
+      "packageName": "com.tofu.novelreader2",
+      "distRepo": "yami-rin/novelreader2-dist",
+      "description": "旧版と共存できる別package版。旧版エクスポートから書庫を移行でき、v1.58以降のエクスポートは保存済み挿絵も保持"
+    },
+    {
       "id": "kakeinote",
       "name": "家計ノート",
       "packageName": "com.tofu.kakeinote",
