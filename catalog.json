@@ -27,7 +27,7 @@
       "name": "家計ノート",
       "packageName": "com.tofu.kakeinote",
       "distRepo": "yami-rin/kakeinote-dist",
-      "description": "端末内で収支・口座・資産・複数カードの請求・カテゴリ別予算・ほしい物の購入計画を管理し、グラフで振り返れる家計簿（商品リンク取込・ダークモード・JSONバックアップ対応）"
+      "description": "端末内で収支・口座・資産・複数カードの請求・カテゴリ別予算・ほしい物を管理し、グラフで振り返れる家計簿（PayPay通知の自動取込・商品リンク取込・ダークモード・JSONバックアップ対応）"
     },
     {
       "id": "cardmanager",
