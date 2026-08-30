@@ -3,7 +3,7 @@
     {
       "id": "apphub",
       "name": "AppHub",
-      "packageName": "com.tofu.apphub",
+      "packageName": "com.tofu.apphub.next",
       "distRepo": "yami-rin/apphub-dist",
       "description": "自作アプリの配布プラットフォーム（このアプリ自身）",
       "isSelf": true
